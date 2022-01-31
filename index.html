@@ -10,20 +10,46 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap" rel="stylesheet">
-  <title>Sunnyside agency landing page</title>
+  <title>Sunnyside Agency Landing Page</title>
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
-  About
-  Services
-  Projects
-  Contact
+  <header class="header">
+     
+    <div class="header-wrapper">
+      <div class="logo">
+        <a href="#"><img src="img/logo.svg" alt=""></a>
+      </div>
+      <div class="header-switch">
+        <img src="img/icon-hamburger.svg" alt="switch">
+      </div>
+    </div>
 
-  We are creatives
+    <nav class="header-nav header-nav-hidden">
 
+      <a class="header-nav-link" href="#">About</a> 
+      <a class="header-nav-link" href="#">Services</a> 
+      <a class="header-nav-link" href="#">Projects</a> 
+      
+      <button class="header-nav-button">
+        CONTACT
+      </button>
+      
+    </nav>
+      
+    <h1 class="header-heading">
+      WE ARE CREATIVES
+    </h1>
+    
+    <div class="header-arrow-image">
+      <img  src="img/icon-arrow-down.svg" alt="arrow-down">
+    </div>
+    
+  </header>
+ 
   Transform your brand
 
   We are a full-service creative agency specializing in helping brands grow fast. 
@@ -66,5 +92,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/dgknfordevelop">Doğukan Çalışkan</a>.
   </div>
+
+  <script type="text/javascript" src="js/nav-switch.js"></script>
 </body>
 </html>

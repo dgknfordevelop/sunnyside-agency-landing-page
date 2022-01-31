@@ -1,4 +1,5 @@
 :root {
+  --white:hsl(0, 0%, 100%);
   --soft-red: hsl(7, 99%, 70%);
   --yellow: hsl(51, 100%, 49%);
   --desaturated-cyan: hsl(167, 40%, 24%);
@@ -408,4 +409,71 @@ td {
 
 html {
   font-size: 18px;
+}
+
+body {
+  min-height: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 545px;
+  font-family: var(--family-fraunces);
+  font-weight: 900;
+  background-image: url(img/image-header.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 20px;
+}
+.header-heading {
+  -webkit-margin-after: 100px;
+  margin-block-end: 100px;
+  text-align: center;
+  color: var(--white);
+  letter-spacing: 10px;
+}
+.header-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.header-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  padding: 40px;
+  position: absolute;
+  z-index: 1;
+  inset-block-start: 90px;
+  background-color: var(--white);
+  font-size: 1.2rem;
+  transition: inset-block-start 1s;
+}
+.header-nav-hidden {
+  inset-block-start: -330px;
+}
+.header-nav-shown {
+  inset-block-start: -330px;
+}
+.header-nav-link {
+  font-family: var(--family-barlow);
+  color: var(--dark-grayish-blue);
+  -webkit-margin-after: 35px;
+  margin-block-end: 35px;
+}
+.header-nav-button {
+  height: 70px;
+  width: 170px;
+  border-radius: 40px;
+  background-color: var(--yellow);
+  color: var(--desaturated-blue);
+}
+.header-arrow-image {
+  position: relative;
+  inset-block-end: 110px;
 }
