@@ -477,3 +477,97 @@ body {
   position: relative;
   inset-block-end: 110px;
 }
+
+.showcase {
+  display: grid;
+  font-family: var(--family-fraunces);
+}
+.showcase-item img {
+  width: 100%;
+}
+.showcase-item-wrapper {
+  display: flex;
+  flex-direction: column;
+  -webkit-padding-after: 20px;
+  padding-block-end: 20px;
+  -webkit-padding-before: 20px;
+  padding-block-start: 20px;
+  -webkit-padding-start: 15px;
+  padding-inline-start: 15px;
+  -webkit-padding-end: 15px;
+  padding-inline-end: 15px;
+  text-align: center;
+}
+.showcase-item-header {
+  font-weight: 900;
+  -webkit-margin-after: 35px;
+  margin-block-end: 35px;
+}
+.showcase-item-text {
+  font-family: var(--family-barlow);
+  -webkit-margin-after: 35px;
+  margin-block-end: 35px;
+}
+.showcase-item-link {
+  position: relative;
+  text-transform: uppercase;
+  color: var(--desaturated-blue);
+  font-weight: 900;
+}
+.showcase-item-link-underline::after {
+  content: "";
+  display: block;
+  position: absolute;
+  inset-inline-start: 95px;
+  inset-block-start: 12px;
+  width: 40%;
+  height: 8px;
+  opacity: 0.4;
+  background-color: var(--yellow);
+  z-index: -1;
+  border-radius: 10px;
+}
+.showcase-item-2 {
+  height: 450px;
+  font-size: 0.9rem;
+  -webkit-padding-before: 50px;
+  padding-block-start: 50px;
+  padding-inline: 15px;
+  color: var(--desaturated-blue);
+}
+.showcase-item-2-text {
+  line-height: 1.6;
+  color: var(--grayish-blue);
+}
+.showcase-item-4 {
+  height: 450px;
+  font-size: 0.9rem;
+  -webkit-padding-before: 50px;
+  padding-block-start: 50px;
+  padding-inline: 15px;
+  color: var(--desaturated-blue);
+}
+.showcase-item-4-text {
+  line-height: 1.6;
+  color: var(--grayish-blue);
+}
+.showcase-item-5 {
+  display: flex;
+  align-items: flex-end;
+  height: 650px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  background-image: url(img/image-graphic-design.jpg);
+  background-size: 100% 100%;
+  color: var(--desaturated-cyan);
+}
+.showcase-item-6 {
+  display: flex;
+  align-items: flex-end;
+  height: 650px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  background-image: url(img/image-photography.jpg);
+  background-size: 100% 100%;
+  color: var(--dark-blue);
+}
