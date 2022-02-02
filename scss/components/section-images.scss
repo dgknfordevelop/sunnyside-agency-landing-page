@@ -1,0 +1,17 @@
+.section{
+    &-images-wrapper{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+    }
+
+    &-image{
+        width: 100%;
+        
+        img{
+            width: 100%;
+            
+        }
+    }
+}
+
