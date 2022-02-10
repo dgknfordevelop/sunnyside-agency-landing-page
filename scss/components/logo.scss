@@ -1,3 +1,13 @@
 .logo{
+    &-footer{
+        margin-block-end: 30px;
 
+       svg{
+             
+           path{
+            fill: #2C7566;
+
+           }
+       }
+    }
 }
