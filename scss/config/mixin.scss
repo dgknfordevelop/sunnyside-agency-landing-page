@@ -1,0 +1,20 @@
+@mixin responsive($screen:"tablet"){
+    
+   @if($screen == "tablet"){
+       @media(min-width:650px){
+           @content;
+       }
+   }
+   
+   @else if($screen == "desktop"){
+       @media(min-width:1100px){
+           @content;
+       }
+   }
+   @else if($screen == "bigger-desktop"){
+       @media(min-width:2000px){
+           @content;
+       }
+   }
+
+}

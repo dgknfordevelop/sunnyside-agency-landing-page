@@ -427,7 +427,13 @@ body {
   background-image: url(img/image-header.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  padding: 20px;
+  padding: 30px;
+}
+@media (min-width: 650px) {
+  .header {
+    --header-color: #3ebfff;
+    background-image: url(img/image-header-desktop.jpg);
+  }
 }
 .header-heading {
   -webkit-margin-after: 100px;
@@ -436,10 +442,21 @@ body {
   color: var(--white);
   letter-spacing: 10px;
 }
+@media (min-width: 650px) {
+  .header-heading {
+    -webkit-margin-after: 140px;
+    margin-block-end: 140px;
+  }
+}
 .header-wrapper {
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+@media (min-width: 1100px) {
+  .header-switch {
+    display: none;
+  }
 }
 .header-nav {
   display: flex;
@@ -454,17 +471,44 @@ body {
   font-size: 1.2rem;
   transition: inset-block-start 1s;
 }
+@media (min-width: 1100px) {
+  .header-nav {
+    padding: 0;
+    -webkit-padding-before: 10px;
+    padding-block-start: 10px;
+    inset-block-start: 0;
+    inset-inline-end: 40px;
+    border: 1px solid red;
+    width: 80%;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: transparent;
+  }
+}
 .header-nav-hidden {
   inset-block-start: -330px;
 }
-.header-nav-shown {
-  inset-block-start: -330px;
+@media (min-width: 1100px) {
+  .header-nav-hidden {
+    inset-block-start: 0;
+  }
 }
 .header-nav-link {
   font-family: var(--family-barlow);
   color: var(--dark-grayish-blue);
   -webkit-margin-after: 35px;
   margin-block-end: 35px;
+}
+@media (min-width: 1100px) {
+  .header-nav-link {
+    -webkit-margin-after: 0;
+    margin-block-end: 0;
+    -webkit-margin-end: 45px;
+    margin-inline-end: 45px;
+    color: var(--white);
+    font-size: 1rem;
+    opacity: 0.8;
+  }
 }
 .header-nav-button {
   height: 70px;
@@ -473,9 +517,26 @@ body {
   background-color: var(--yellow);
   color: var(--desaturated-blue);
 }
+@media (min-width: 1100px) {
+  .header-nav-button {
+    background-color: var(--white);
+    font-weight: 900;
+    font-size: 0.9rem;
+    height: 55px;
+    width: 135px;
+  }
+}
 .header-arrow-image {
   position: relative;
   inset-block-end: 110px;
+}
+@media (min-width: 650px) {
+  .header-arrow-image {
+    inset-block-start: -200px;
+  }
+  .header-arrow-image img {
+    height: 80px;
+  }
 }
 
 .logo-footer {
@@ -671,6 +732,9 @@ body {
 .footer-nav-links {
   color: var(--moderate-cyan);
   font-family: var(--family-barlow);
+}
+.footer-nav-links:hover {
+  color: white;
 }
 .footer-socials {
   display: flex;

@@ -1,4 +1,4 @@
-.header{
+.header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,23 +10,41 @@
     background-image: url(img/image-header.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    padding: 20px;
+    padding: 30px;
 
-    &-heading{
+    @include responsive() {
+        --header-color: #3ebfff;
+        background-image: url(img/image-header-desktop.jpg);
+    }
+   
+
+
+    &-heading {
         margin-block-end: 100px;
         text-align: center;
         color: var(--white);
         letter-spacing: 10px;
+
+        @include responsive(){
+        margin-block-end: 140px;
+
+        }
     }
 
-    &-wrapper{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-        
+    &-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
     }
 
-    &-nav{
+    &-switch{
+        @include responsive("desktop"){
+            display: none;
+        }
+    }
+
+    &-nav {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -38,38 +56,69 @@
         background-color: var(--white);
         font-size: 1.2rem;
         transition: inset-block-start 1s;
-        
-
-        &-hidden{
-            inset-block-start: -330px;
+        @include responsive("desktop"){
+            padding: 0;
+            padding-block-start: 10px;
+            inset-block-start: 0;
+            inset-inline-end: 40px;
+            border: 1px solid red;
+            width: 80%;
+            flex-direction: row;
+            justify-content: flex-end;
+            background-color: transparent;
         }
-        
-        &-shown{
+
+        &-hidden {
             inset-block-start: -330px;
+            @include responsive("desktop"){
+                inset-block-start:0;
+            }
         }
 
-        &-link{
+        &-link {
             font-family: var(--family-barlow);
             color: var(--dark-grayish-blue);
             margin-block-end: 35px;
+            @include responsive("desktop"){
+                margin-block-end: 0;
+                margin-inline-end: 45px;
+                color: var(--white);
+                font-size: 1rem;
+                opacity: 0.8;
+            }
         }
 
-        &-button{
+        &-button {
             height: 70px;
             width: 170px;
             border-radius: 40px;
             background-color: var(--yellow);
             color: var(--desaturated-blue);
+            @include responsive("desktop"){
+                background-color: var(--white);
+                font-weight: 900;
+                font-size: 0.9rem;
+                height: 55px;
+                width: 135px;
+            }
         }
     }
 
-    &-switch{
-       
-    
-    }
-
-    &-arrow-image{
+    &-arrow-image {
         position: relative;
         inset-block-end: 110px;
+
+        
+
+        @include responsive() {
+
+            inset-block-start: -200px;
+            
+            img {
+                height: 80px;
+            }
+        }
     }
+
+
 }

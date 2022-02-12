@@ -13,6 +13,9 @@
         width:100%;
         margin-block-end: 70px;
         &-links{
+            &:hover{
+                color: white;
+            }
             color: var(--moderate-cyan);
             font-family: var(--family-barlow)
         }
