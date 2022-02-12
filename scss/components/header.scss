@@ -14,7 +14,7 @@
 
     @include responsive() {
         --header-color: #3ebfff;
-        background-image: url(img/image-header-desktop.jpg);
+        background-image: url(img/image-desktop-header.jpg);
     }
    
 
@@ -61,7 +61,6 @@
             padding-block-start: 10px;
             inset-block-start: 0;
             inset-inline-end: 40px;
-            border: 1px solid red;
             width: 80%;
             flex-direction: row;
             justify-content: flex-end;
@@ -94,6 +93,7 @@
             border-radius: 40px;
             background-color: var(--yellow);
             color: var(--desaturated-blue);
+            cursor: pointer;
             @include responsive("desktop"){
                 background-color: var(--white);
                 font-weight: 900;
