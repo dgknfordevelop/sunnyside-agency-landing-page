@@ -12,7 +12,7 @@
        }
    }
    @else if($screen == "bigger-desktop"){
-       @media(min-width:2000px){
+       @media(min-width:1400px){
            @content;
        }
    }

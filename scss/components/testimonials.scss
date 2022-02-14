@@ -4,9 +4,14 @@
         font-family: var(--family-barlow);
         display: flex;
         flex-direction: column;
-        margin-block-start: 65px;
-        margin-block-end: 20px;
+        padding-block-start: 65px;
+        padding-block-end: 20px;
         text-align: center;
+        @include responsive("bigger-desktop"){
+            padding-block-start: 140px;
+            padding-block-end: 70px;
+        }
+       
     }
 
     &-header {
@@ -22,6 +27,10 @@
     &-subjects {
         display: flex;
         flex-direction: column;
+        @include responsive("bigger-desktop"){
+            flex-direction: row;
+            padding-inline: 120px;
+        }
 
         &-box {
             display: flex;
