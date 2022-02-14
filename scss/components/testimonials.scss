@@ -7,7 +7,7 @@
         padding-block-start: 65px;
         padding-block-end: 20px;
         text-align: center;
-        @include responsive("bigger-desktop"){
+        @include responsive("desktop"){
             padding-block-start: 140px;
             padding-block-end: 70px;
         }
@@ -27,8 +27,10 @@
     &-subjects {
         display: flex;
         flex-direction: column;
-        @include responsive("bigger-desktop"){
+        @include responsive("desktop"){
             flex-direction: row;
+        }
+        @include responsive("bigger-desktop"){
             padding-inline: 120px;
         }
 
@@ -38,6 +40,9 @@
             align-items: center;
             margin-block-end: 70px;
             padding-inline: 25px;
+            @include responsive("desktop"){
+                padding-inline: 20px;
+            }
         }
 
         &-avatar {

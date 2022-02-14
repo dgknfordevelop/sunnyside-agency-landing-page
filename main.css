@@ -769,7 +769,7 @@ body {
   padding-block-end: 20px;
   text-align: center;
 }
-@media (min-width: 1400px) {
+@media (min-width: 1100px) {
   .testimonials-wrapper {
     -webkit-padding-before: 140px;
     padding-block-start: 140px;
@@ -791,9 +791,13 @@ body {
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 1400px) {
+@media (min-width: 1100px) {
   .testimonials-subjects {
     flex-direction: row;
+  }
+}
+@media (min-width: 1400px) {
+  .testimonials-subjects {
     padding-inline: 120px;
   }
 }
@@ -804,6 +808,11 @@ body {
   -webkit-margin-after: 70px;
   margin-block-end: 70px;
   padding-inline: 25px;
+}
+@media (min-width: 1100px) {
+  .testimonials-subjects-box {
+    padding-inline: 20px;
+  }
 }
 .testimonials-subjects-avatar {
   width: 75px;
