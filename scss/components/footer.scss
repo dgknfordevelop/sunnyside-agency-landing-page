@@ -12,7 +12,16 @@
         justify-content: space-around;
         width:100%;
         margin-block-end: 70px;
+        @include responsive("desktop"){
+            justify-content: center;
+        }
+
         &-links{
+            @include responsive("desktop"){
+                &:nth-child(1), &:nth-child(2){
+                    margin-inline-end: 40px;
+                }
+            }
             &:hover{
                 color: white;
             }
@@ -23,7 +32,9 @@
     
  
     &-socials{
-       
+        @include responsive("desktop"){
+        width: 150px;
+        }
         display: flex;
         justify-content: space-between;
         width: 124px;

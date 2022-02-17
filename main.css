@@ -910,9 +910,20 @@ body {
   -webkit-margin-after: 70px;
   margin-block-end: 70px;
 }
+@media (min-width: 1100px) {
+  .footer-nav {
+    justify-content: center;
+  }
+}
 .footer-nav-links {
   color: var(--moderate-cyan);
   font-family: var(--family-barlow);
+}
+@media (min-width: 1100px) {
+  .footer-nav-links:nth-child(1), .footer-nav-links:nth-child(2) {
+    -webkit-margin-end: 40px;
+    margin-inline-end: 40px;
+  }
 }
 .footer-nav-links:hover {
   color: white;
@@ -921,4 +932,9 @@ body {
   display: flex;
   justify-content: space-between;
   width: 124px;
+}
+@media (min-width: 1100px) {
+  .footer-socials {
+    width: 150px;
+  }
 }
