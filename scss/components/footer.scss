@@ -35,9 +35,21 @@
         @include responsive("desktop"){
         width: 150px;
         }
+        cursor: pointer;
         display: flex;
         justify-content: space-between;
         width: 124px;
+
+        &-div{
+            &:hover{
+                svg{
+                    path{
+                        fill: white;
+                    }
+                }
+            }
+        }
+        
     }
  
     

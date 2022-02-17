@@ -57,6 +57,9 @@
             text-transform: uppercase;
             color: var(--desaturated-blue);
             font-weight: 900;
+            @include responsive("desktop"){
+                justify-content: left;
+            }
            
             &-yellow{
                 &-underline{
@@ -79,6 +82,9 @@
                             height: 8px;
                         }
                     }
+                    &:hover::after{
+                        opacity: 1;
+                    }
                 }
             }
 
@@ -94,6 +100,7 @@
                         background-color: var(--soft-red);
                         z-index: -1;
                         border-radius: 10px;
+                        
                         @include responsive(){
                             width: 170px;
                             height: 15px;
@@ -103,12 +110,11 @@
                             height: 8px;
                         }
                     }
+                    &:hover::after{
+                        opacity: 1;
+                    }
                 }
             }
-            @include responsive("desktop"){
-                justify-content: left;
-            }
-           
         }
 
         &-1{

@@ -100,6 +100,10 @@
                 font-size: 0.9rem;
                 height: 55px;
                 width: 135px;
+                &:hover{
+                    background-color: #6bd0ff;
+                    color: var(--white);
+                }
             }
         }
     }
