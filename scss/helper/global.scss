@@ -5,5 +5,12 @@ html{
 
 body{
     min-height: 100%;
-    
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    @include responsive("extra-bigger-screen"){
+        max-width: 1800px;
+    }
 }

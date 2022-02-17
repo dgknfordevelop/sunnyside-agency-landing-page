@@ -16,5 +16,10 @@
            @content;
        }
    }
+   @else if($screen == "extra-bigger-screen"){
+       @media(min-width:1800px){
+           @content;
+       }
+   }
 
 }
