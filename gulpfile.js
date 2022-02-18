@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const browserSync = require('browser-sync').create();
 const prefixer = require('gulp-autoprefixer');
-const cleanCss = require('gulp-clean-css');
+const cleanCSS = require('gulp-clean-css');
 
 function style() {
     return gulp.src('./styles/scss/main.scss')
@@ -10,34 +10,36 @@ function style() {
         .pipe(prefixer({
             cascade: false
         }))
-        .pipe(gulp.dest('./styles/*.css'))
+        .pipe(gulp.dest('./styles/'))
         .pipe(browserSync.stream());
 }
 
-function minifycCSS(){
+function minifyCSS(){
     return gulp.src('./styles/*.css')
     .pipe(cleanCSS({debug: true}, (details) => {
       console.log(`${details.name}: ${details.stats.originalSize}`);
       console.log(`${details.name}: ${details.stats.minifiedSize}`);
     }))
-  .pipe(gulp.dest('dist'));
+  .pipe(gulp.dest('dist'))
+  .pipe(browserSync.stream());
 }
 
 function watch() {
 
     browserSync.init({
         server: {
-            baseDir: './'
+            baseDir: './dist'
         }
     });
 
     gulp.watch('./scss/**/*.scss', style); // if anything changes here it starts the 'style'.
     gulp.watch('./*.html').on('change', browserSync.reload);
     gulp.watch('./js/*.js').on('change', browserSync.reload);
-    gulp.watch('./*.css', minifycCSS)
+    gulp.watch('./styles/*.css', minifyCSS)
 
 }
 
 
 exports.style = style;
+exports.minifyCSS = minifyCSS;
 exports.watch = watch;
