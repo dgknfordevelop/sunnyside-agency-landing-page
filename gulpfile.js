@@ -12,18 +12,18 @@ function style() {
         .pipe(prefixer({
             cascade: false
         }))
-        .pipe(gulp.dest('./styles/'))
+        .pipe(gulp.dest('./src/'))
         .pipe(browserSync.stream());
 }
 
 function minifyHTML(){
-    return gulp.src('./*.html')
+    return gulp.src('./src/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('dist'))
 }
 
 function minifyCSS(){
-    return gulp.src('./styles/*.css')
+    return gulp.src('./src/*.css')
     .pipe(cleanCSS({debug: true}, (details) => {
       console.log(`${details.name}: ${details.stats.originalSize}`);
       console.log(`${details.name}: ${details.stats.minifiedSize}`);
@@ -40,10 +40,10 @@ function watch() {
     });
     
     gulp.watch('./styles/scss/**/*.scss', style); // if anything changes here it starts the 'style'.
-    gulp.watch('./*.html').on('change', browserSync.reload);
-    gulp.watch('./js/*.js').on('change', browserSync.reload);
-    gulp.watch('./*.html', minifyHTML);
-    gulp.watch('./styles/*.css', minifyCSS);
+    gulp.watch('./src/*.html').on('change', browserSync.reload);
+    gulp.watch('./src/*.js').on('change', browserSync.reload);
+    gulp.watch('./src/*.html', minifyHTML);
+    gulp.watch('./src/*.css', minifyCSS);
 }
 
 function defaultTask(){
