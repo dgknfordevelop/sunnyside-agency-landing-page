@@ -14,7 +14,7 @@ gulp
 ```
 
 # Credits for Design
-https://www.frontendmentor.io
+https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef
 
 # License
 
